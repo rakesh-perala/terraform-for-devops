@@ -46,7 +46,7 @@ resource "aws_default_vpc" "default" {
 resource "aws_security_group" "my_security_group" {
   name        = "automate-sg"
   description = "This will add Terraform generated SG"
-  vpc_id      = aws_default_vpc.default.id
+  vpc_id      = aws_default_vpc.default.id      # interpolation
 
   
   # Inbound Rules
